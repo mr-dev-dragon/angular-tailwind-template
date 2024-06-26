@@ -1,17 +1,17 @@
+import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormBuilder, ReactiveFormsModule, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
-import { AuthService } from "../../services/auth.service";
-import { CommonModule } from "@angular/common";
 import { NotificationsService } from "../../../shared/services/notifications/notifications.service";
-import { NotificationType } from "../../../shared/types/notification.type";
+import { NotificationType } from "../../../shared/types/Notification.type";
+import { AuthService } from "../../services/auth.service";
 
 @Component({
-  selector: 'app-login-page',
+  selector: "app-login-page",
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule],
-  templateUrl: './login-page.component.html',
-  styleUrl: './login-page.component.css',
+  templateUrl: "./login-page.component.html",
+  styleUrl: "./login-page.component.css",
 })
 export class LoginPageComponent {
   loginForm = this.fb.group({
@@ -23,23 +23,13 @@ export class LoginPageComponent {
     private router: Router,
     private auth: AuthService,
     private fb: FormBuilder,
-    private notification: NotificationsService,
   ) {}
 
   async login() {
     const formValues = this.loginForm.value;
     if (this.loginForm.invalid) return;
 
-    const result = await this.auth.login(formValues.email!, formValues.password!);
-    if (result === "OK") {
-      this.router.navigate(["/"]);
-    } else {
-      this.notification.add({
-        type: NotificationType.Error,
-        title: "Impossible de se connecter",
-        description: result,
-      });
-    }
+    await this.auth.login(formValues.email!, formValues.password!);
   }
 
   register() {

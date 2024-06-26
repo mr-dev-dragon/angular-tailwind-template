@@ -21,7 +21,7 @@
 
         <!-- Profile Name Input -->
         <div>
-          <label for="profileName" class="block text-sm font-medium leading-6 text-gray-900">Profile Name</label>
+          <label for="profileName" class="block text-sm font-medium leading-6 text-gray-900">A valid email address is mandatory</label>
           <input
             id="profileName"
             type="text"
@@ -30,7 +30,7 @@
             class="block w-full rounded-md border-0 bg-transparent py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-primary-300/100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
           />
           @if (registerForm.get("profileName")?.errors && registerForm.get("profileName")?.touched) {
-            <label class="text-sm font-medium text-red-600">Vous devez saisir un nom valide</label>
+            <label class="text-sm font-medium text-red-600">A valid name is mandatory</label>
           }
         </div>
 
@@ -45,7 +45,7 @@
             class="block w-full rounded-md border-0 bg-transparent py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-primary-300/100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
           />
           @if (registerForm.get("password")?.errors && registerForm.get("password")?.touched) {
-            <label class="text-sm font-medium text-red-600">Un mot de passe fort est obligatoire</label>
+            <label class="text-sm font-medium text-red-600">A strong password is mandatory</label>
           }
         </div>
 
@@ -60,7 +60,7 @@
             class="block w-full rounded-md border-0 bg-transparent py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-primary-300/100 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
           />
           @if (registerForm.get("confirmPassword")?.errors && registerForm.get("confirmPassword")?.touched) {
-            <label class="text-sm font-medium text-red-600">Vous le faites exprès ?</label>
+            <label class="text-sm font-medium text-red-600">Passwords must match</label>
           }
         </div>
 

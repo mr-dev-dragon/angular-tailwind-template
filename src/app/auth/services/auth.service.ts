@@ -1,8 +1,10 @@
-import { Injectable, Signal, WritableSignal, computed, isDevMode, signal } from "@angular/core";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
-import { firstValueFrom, lastValueFrom } from "rxjs";
+import { Injectable, Signal, WritableSignal, computed, isDevMode, signal } from "@angular/core";
 import { Router } from "@angular/router";
+import { firstValueFrom, lastValueFrom } from "rxjs";
 import AccessToken from "../types/AccessToken.type";
+import { NotificationsService } from "../../shared/services/notifications/notifications.service";
+import { NotificationType } from "../../shared/types/Notification.type";
 
 @Injectable({
   providedIn: "root",
@@ -17,6 +19,7 @@ export class AuthService {
   constructor(
     private http: HttpClient,
     private router: Router,
+    private notification: NotificationsService,
   ) {
     const localToken = window.localStorage.getItem("access_token") || "";
     if (this.isTokenValid(localToken)) this.accessToken.set(localToken);
@@ -28,6 +31,10 @@ export class AuthService {
       const isCorrect = this.setAccessToken(response.accessToken);
       isCorrect && this.redirectUser();
     } catch (error) {
+      this.notification.add({
+        type: NotificationType.Error,
+        title: "Failed to login",
+      });
       throw new HttpErrorResponse({ statusText: "Failed to login", error: error });
     }
   }
