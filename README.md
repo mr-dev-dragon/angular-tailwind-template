@@ -1,27 +1,28 @@
 # AngularTailwindTemplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+This template aims to quickly get started on an up to date angular project.
 
-## Development server
+## Tech Stack 
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![ESLint](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white)
+![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [x] Angular 18 Project
+- [x] Tailwind, the modern CSS framework
+- [x] Tailwind Animated, to animate your content with tailwind classes
+- [x] Nightwind, automatically adapts your app for dark mode
+- [x] ESLint, for static code analysis
+- [x] Prettier, formats the code for readability
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [x] Clean & scalable structure
+- [x] Angular Router
+- [x] Environments (dev, staging and production)
+- [x] API Url interceptor
+- [x] Authentification module with service, guards and components
+- [x] Automatic dark mode support
+- [x] TODO comments, to indicate parts to customize
