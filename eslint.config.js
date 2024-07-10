@@ -31,6 +31,13 @@ module.exports = tseslint.config(
           style: "kebab-case",
         },
       ],
+      "prettier/prettier": [
+        "warn",
+        {},
+        {
+          usePrettierrc: true,
+        },
+      ],
       "@typescript-eslint/no-explicit-any": ["off"],
       "@typescript-eslint/ban-ts-comment": ["off"],
     },
