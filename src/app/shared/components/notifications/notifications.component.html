@@ -2,15 +2,17 @@
   @for (notification of notificationsServices.notifications; track $index) {
     <div
       (click)="onclick(notification)"
+      (keyup.enter)="onclick(notification)"
       [ngClass]="
         {
-          error: 'border-red-200 bg-red-100 text-sm text-red-800 dark:border-red-900 dark:bg-red-800/10 dark:text-red-500',
-          info: 'border-primary-200 bg-primary-100 text-sm text-primary-800 dark:border-primary-900 dark:bg-primary-800/10 dark:text-primary-500',
+          error: 'text-red-800 bg-red-100 border-red-200 text-sm dark:text-red-500 dark:border-red-900 dark:bg-red-800/10',
+          info: 'text-primary-800 bg-primary-100 border-primary-200 text-sm dark:text-primary-500 dark:border-primary-900 dark:bg-primary-800/10',
           success:
-            'border-green-200 bg-green-100 text-sm text-green-800 dark:border-green-900 dark:bg-green-800/10 dark:text-green-500',
+            'text-green-800 bg-green-100 border-green-200 text-sm dark:text-green-500 dark:border-green-900 dark:bg-green-800/10',
           warning:
-            'border-secondary-200 bg-secondary-100 text-sm text-secondary-800 dark:border-secondary-900 dark:bg-secondary-800/10 dark:text-secondary-500',
-          normal: 'border-gray-200 bg-gray-100 text-sm text-gray-800 dark:border-gray-900 dark:bg-gray-800/10 dark:text-gray-500'
+            'border-secondary-200 bg-secondary-100 text-secondary-800 dark:border-secondary-900 dark:bg-secondary-800/10 dark:text-secondary-500 text-sm',
+          normal:
+            'text-gray-800 bg-gray-100 border-gray-200 text-sm dark:text-gray-500 dark:border-gray-900 dark:bg-gray-800/10'
         }[notification.type]
       "
       class="flex w-full flex-col rounded-lg border"

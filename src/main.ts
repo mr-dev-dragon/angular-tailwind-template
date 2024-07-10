@@ -4,7 +4,7 @@ import { AppComponent } from "./app/app.component";
 // @ts-expect-error
 import nightwind from "nightwind/helper";
 
-bootstrapApplication(AppComponent, appConfig).catch((err) => console.error(err));
+bootstrapApplication(AppComponent, appConfig).catch(err => console.error(err));
 
 nightwind.initNightwind();
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {

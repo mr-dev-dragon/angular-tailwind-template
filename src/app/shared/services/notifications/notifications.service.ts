@@ -5,11 +5,9 @@ import { Notification } from "../../types/Notification.type";
   providedIn: "root",
 })
 export class NotificationsService {
-  notifications: Set<Notification> = new Set();
+  notifications = new Set<Notification>();
 
-  constructor() {}
-
-  public add(notification: Notification, duration: number = 5) {
+  public add(notification: Notification, duration = 5) {
     this.notifications.add(notification);
     setTimeout(() => {
       this.remove(notification);

@@ -12,7 +12,7 @@ This template aims to quickly get started on an up to date angular project.
 
 - [x] Angular 18 Project
 - [x] Tailwind, the modern CSS framework
-- [x] Tailwind Animated, to animate your content with tailwind classes
+- [x] Tailwind Animated, animate your content with tailwind classes
 - [x] Nightwind, automatically adapts your app for dark mode
 - [x] ESLint, for static code analysis
 - [x] Prettier, formats the code for readability
@@ -23,6 +23,5 @@ This template aims to quickly get started on an up to date angular project.
 - [x] Angular Router
 - [x] Environments (dev, staging and production)
 - [x] API Url interceptor
-- [x] Authentification module with service, guards and components
 - [x] Automatic dark mode support
 - [x] TODO comments, to indicate parts to customize
