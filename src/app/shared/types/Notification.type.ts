@@ -1,14 +1,5 @@
 export type Notification = {
-  type: NotificationType;
+  type: "error" | "info" | "success" | "warning" | "normal";
   title: string;
   description?: string;
-  onClicAction?: () => void;
 };
-
-export enum NotificationType {
-  Error = "error",
-  Info = "info",
-  Success = "success",
-  Warning = "warning",
-  Normal = "normal",
-}

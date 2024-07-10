@@ -15,9 +15,5 @@ export class NotificationsComponent {
 
   onclick(notification: Notification) {
     this.notificationsServices.remove(notification);
-
-    if (notification.onClicAction) {
-      notification.onClicAction;
-    }
   }
 }
