@@ -2,7 +2,8 @@
 const eslint = require("@eslint/js");
 const tseslint = require("typescript-eslint");
 const angular = require("angular-eslint");
-const eslintPluginPrettierRecommended = require("eslint-plugin-prettier/recommended");
+const tailwind = require("eslint-plugin-tailwindcss");
+const eslintConfigPrettier = require("eslint-config-prettier");
 
 module.exports = tseslint.config(
   {
@@ -12,6 +13,8 @@ module.exports = tseslint.config(
       ...tseslint.configs.recommended,
       ...tseslint.configs.stylistic,
       ...angular.configs.tsRecommended,
+      ...tailwind.configs["flat/recommended"],
+      eslintConfigPrettier
     ],
     processor: angular.processInlineTemplates,
     rules: {
@@ -31,15 +34,6 @@ module.exports = tseslint.config(
           style: "kebab-case",
         },
       ],
-      "prettier/prettier": [
-        "warn",
-        {},
-        {
-          usePrettierrc: true,
-        },
-      ],
-      "@typescript-eslint/no-explicit-any": ["off"],
-      "@typescript-eslint/ban-ts-comment": ["off"],
     },
   },
   {
@@ -47,5 +41,4 @@ module.exports = tseslint.config(
     extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
     rules: {},
   },
-  eslintPluginPrettierRecommended,
 );

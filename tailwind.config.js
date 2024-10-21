@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
-  darkMode: "class",
-  plugins: [require("@tailwindcss/forms"), require("nightwind"), require("tailwindcss-animated")],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        satoshi: ["Satoshi", "system-ui", "sans-serif"],
+      },
+    },
     colors: {
       transparent: "transparent",
       white: "#ffffff",
@@ -22,7 +24,7 @@ module.exports = {
         900: "#111827",
         950: "#030712",
       },
-      primary: {
+      blue: {
         50: "#f0f9ff",
         100: "#e3f5ff",
         200: "#bae6fd",
@@ -34,6 +36,19 @@ module.exports = {
         800: "#075985",
         900: "#0c4a6e",
         950: "#082f49",
+      },
+      purple: {
+        50: "#f5f3ff",
+        100: "#ede9fe",
+        200: "#ddd6fe",
+        300: "#c4b5fd",
+        400: "#a78bfa",
+        500: "#8b5cf6",
+        600: "#7c3aed",
+        700: "#6d28d9",
+        800: "#5b21b6",
+        900: "#4c1d95",
+        950: "#2e1065",
       },
       red: {
         50: "#fef2f2",
@@ -76,4 +91,5 @@ module.exports = {
       },
     },
   },
+  plugins: [],
 };
