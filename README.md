@@ -1,5 +1,5 @@
 ### TODO
-Replace every instance of `{{app-name}}` with the name of the project.
+Replace every instance of `bank` with the name of the project.
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
 
