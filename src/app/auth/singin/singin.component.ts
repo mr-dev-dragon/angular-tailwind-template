@@ -2,12 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-totall',
+  selector: 'app-singin',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './totall.component.html',
-  styleUrl: './totall.component.css'
+  templateUrl: './singin.component.html',
+  styleUrl: './singin.component.css'
 })
-export class TotallComponent {
+export class SinginComponent {
 
 }

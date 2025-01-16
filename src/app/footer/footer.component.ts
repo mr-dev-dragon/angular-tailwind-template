@@ -2,12 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-totall',
+  selector: 'app-footer',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './totall.component.html',
-  styleUrl: './totall.component.css'
+  templateUrl: './footer.component.html',
+  styleUrl: './footer.component.css'
 })
-export class TotallComponent {
+export class FooterComponent {
 
 }
